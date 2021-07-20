@@ -1,0 +1,42 @@
+body {
+    height: 100%;
+}
+
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.content {
+    width: 400px;
+    margin: 0 auto;
+    background-color: lightcyan
+}
+
+.modal-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal {
+    position: relative;
+    width: 400px;
+    background-color: gold;
+    padding: 50px;
+    z-index: 10;
+}
+
+.modal button {
+    position: absolute;
+    top: -30px;
+    right: -30px;
+}
