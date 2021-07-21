@@ -15,7 +15,7 @@ number.addEventListener('input', (e) => {
         card.textContent = number.value;
         cardsCount.push(card);
         counter++;
-        render(cardsCount);
+        cards.appendChild(card);
     }
     if (+number.value < counter) {
         cards.removeChild(cardsCount.pop());
@@ -25,7 +25,7 @@ number.addEventListener('input', (e) => {
 
 function render(array) {
     array.forEach(element => {
-        cards.appendChild(element);
+
     });
 }
 
@@ -33,7 +33,7 @@ color.addEventListener('input', (e) => {
     e.preventDefault();
     if (!isEven) {
         for (let i = 0; i < cardsCount.length; i++) {
-            if (i % 2 !== 0) {
+            if (+cardsCount[i].textContent % 2 != 0) {
                 cardsCount[i].style.background = color.value;
             } else {
                 cardsCount[i].style.background = '#ffffff';
@@ -42,7 +42,7 @@ color.addEventListener('input', (e) => {
         isEven = !isEven;
     } else {
         for (let i = 0; i < cardsCount.length; i++) {
-            if (i % 2 === 0) {
+            if (+cardsCount[i].textContent % 2 == 0) {
                 cardsCount[i].style.background = color.value;
             } else {
                 cardsCount[i].style.background = '#ffffff';
